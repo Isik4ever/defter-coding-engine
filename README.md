@@ -41,7 +41,7 @@ The automation threshold is not a constant. `calibrate()` reads the company's ow
 
 ## Evaluation (`evaluate.ts`, `metrics.ts`)
 
-A labelled set runs through the same router; the report splits precision by source (rule / memory / classifier / LLM) and by band, so a change to one layer cannot hide behind another.
+A labelled set runs through the same router; the report splits precision by source (rule / memory / classifier / LLM), reports the auto band on its own and lists the confusions, so a change to one layer cannot hide behind another.
 
 ## What is not here
 
