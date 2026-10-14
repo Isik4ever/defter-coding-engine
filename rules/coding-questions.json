@@ -1,0 +1,18 @@
+{
+	"version": 1,
+	"note": "AI-vågen (10) – question templates per account pair. When the coder's two best candidates are close and below the automation threshold, the inbox asks instead of guessing. `a`/`b` are account prefixes (\"7\" = every 7xx, \"721-7\" = the account and its sub-accounts); the question is `cq.q.<key>`, each side's short explanation `cq.h.<hint>` (az/ru/en in src/lib/i18n/*/books.ts). The first template whose sides match the two best candidates (in either order) wins; otherwise `cq.q.generic` with the account names.",
+	"templates": [
+		{ "key": "assetOrRepair", "a": ["111", "113"], "b": ["721-7", "731"], "hints": { "a": "asset", "b": "repair" } },
+		{ "key": "assetOrLva", "a": ["111", "113"], "b": ["207"], "hints": { "a": "asset", "b": "lva" } },
+		{ "key": "lvaOrExpense", "a": ["207"], "b": ["721-7"], "hints": { "a": "lva", "b": "supplies" } },
+		{ "key": "goodsOrMaterials", "a": ["205"], "b": ["201"], "hints": { "a": "goods", "b": "materials" } },
+		{ "key": "goodsOrExpense", "a": ["205", "201"], "b": ["7"], "hints": { "a": "goods", "b": "expense" } },
+		{ "key": "supplierOrExpense", "a": ["531"], "b": ["7"], "hints": { "a": "supplier", "b": "expense" } },
+		{ "key": "advanceOrExpense", "a": ["244"], "b": ["7"], "hints": { "a": "advance", "b": "expense" } },
+		{ "key": "customerOrRevenue", "a": ["211"], "b": ["601", "611"], "hints": { "a": "customer", "b": "revenue" } },
+		{ "key": "travelOrOther", "a": ["721-10"], "b": ["721-11", "721-12"], "hints": { "a": "travel", "b": "representation" } },
+		{ "key": "professionalOrOther", "a": ["721-8"], "b": ["721-11"], "hints": { "a": "professional", "b": "other" } },
+		{ "key": "rentOrUtilities", "a": ["721-3"], "b": ["721-4"], "hints": { "a": "rent", "b": "utilities" } },
+		{ "key": "salaryOrAdvance", "a": ["533"], "b": ["244"], "hints": { "a": "salary", "b": "advance" } }
+	]
+}
